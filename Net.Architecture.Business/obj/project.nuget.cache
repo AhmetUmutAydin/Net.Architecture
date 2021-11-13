@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "vCrfJjV+u92IDPw0Qp+wi+VP4eH/Jcmd1+pXCOuoav319hY5vDIxX4DcjFWrl2ae0EOv8JSrfZqj69HpDYSOrg==",
+  "dgSpecHash": "E8EiLcwYQ0h8KHYm5r1SE6Sbtv22HurKC+wjH81zuWTjyaoNujRBLJ3fpfdu2BuNdv6Z/0km6vL9fvb1RAhvPA==",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\source\\repos\\Net.Architecture\\Net.Architecture.Business\\Net.Architecture.Business.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\autofac\\6.1.0\\autofac.6.1.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\fluentvalidation\\9.3.0\\fluentvalidation.9.3.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.11\\microsoft.aspnetcore.jsonpatch.3.1.11.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.11\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.11.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
