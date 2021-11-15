@@ -39,21 +39,9 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
             return isItExists;
         }
 
-        public async Task<LayoutDto> GetUserLayoutInformation(long userId)
-        {
-            var layout = await _context.User.Where(x => x.Status && x.Id == userId).Select(s => new LayoutDto()
-            {
-                Id = s.Id,
-                ImageUrl = s.Employee.PersonalInformation.File != null ? s.Employee.PersonalInformation.File.Source : null,
-                InstitutionName = s.Employee.Institution.Name,
-                Username = s.Username
-            }).FirstOrDefaultAsync();
-            return layout;
-        }
-
         public async Task<User> GetUserWithEmployee(string username, string moduleRole)
         {
-            var user = await _context.User.Include(i => i.Employee).FirstOrDefaultAsync(u => (u.Username == username || u.Email == username) && u.UserRole.Any(a => (a.Role.Name == moduleRole || (moduleRole == Constants.CompanyRoleName && a.Role.Name == Constants.DemoRoleName)) && a.Status) && u.Status && u.Employee.Status);
+            var user = await _context.User.FirstOrDefaultAsync(u => (u.Username == username || u.Email == username) && u.UserRole.Any(a => a.Role.Name == moduleRole && a.Status) && u.Status);
             return user;
         }
     }

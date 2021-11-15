@@ -8,6 +8,5 @@ namespace Net.Architecture.DataAccess.Abstract.Auth
     public interface IUserRoleDal : IBaseRepository<UserRole>
     {
         Task<IEnumerable<Role>> GetUserRoles(long userId);
-        Task<bool> IsItDemoUser(long userId);
     }
 }

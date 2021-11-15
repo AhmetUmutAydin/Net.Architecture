@@ -8,8 +8,6 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
     public class RoleDal : BaseRepository<Role, PostgreSqlContext>, IRoleDal
     {
         public RoleDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-        }
-
+        {}
     }
 }

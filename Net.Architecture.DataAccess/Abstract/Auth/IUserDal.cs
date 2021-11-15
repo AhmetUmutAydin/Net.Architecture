@@ -11,8 +11,6 @@ namespace Net.Architecture.DataAccess.Abstract.Auth
         Task<bool> CheckEmailExists(string email);
         Task<bool> CheckUsernameExistsExpectOwnUser(string username,long userId);
         Task<bool> CheckEmailExistsExpectOwnUser(string email, long userId);
-        Task<LayoutDto> GetUserLayoutInformation(long userId);
         Task<User> GetUserWithEmployee(string username, string moduleRole);
-
     }
 }

@@ -21,11 +21,5 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
                 .Select(s => s.Role).ToListAsync();
             return roles;
         }
-
-        public async Task<bool> IsItDemoUser(long userId)
-        {
-            var isItDemo = await _context.UserRole.AnyAsync(i => i.Status && i.Role.Name == Constants.DemoRoleName && i.UserId == userId);
-            return isItDemo;
-        }
     }
 }
