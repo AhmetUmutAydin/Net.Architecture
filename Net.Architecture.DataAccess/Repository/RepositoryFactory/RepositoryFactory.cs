@@ -38,7 +38,5 @@ namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
         {
             return (T)Activator.CreateInstance(typeof(T), _context);
         }
-
     }
-
 }

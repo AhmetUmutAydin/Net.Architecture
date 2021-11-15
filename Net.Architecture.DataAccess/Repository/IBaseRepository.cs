@@ -22,5 +22,4 @@ namespace Net.Architecture.DataAccess.Repository
         void DeleteRange(IEnumerable<TEntity> entities);
         void Delete(TEntity entity);
     }
-
 }
