@@ -9,7 +9,6 @@ namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
     public class RepositoryFactory<TContext> : IRepositoryFactory where TContext : DbContext
     {
         protected Dictionary<Type, object> _repositories;
-        //protected readonly DbContext _context;
         protected readonly TContext _context;
 
         public RepositoryFactory(TContext context)
