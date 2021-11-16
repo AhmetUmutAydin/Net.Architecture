@@ -8,8 +8,6 @@ namespace Net.Architecture.DataAccess.Concrete.Common
     public class ContactDal : BaseRepository<Contact, PostgreSqlContext>, IContactDal
     {
         public ContactDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-
-        }
+        { }
     }
 }

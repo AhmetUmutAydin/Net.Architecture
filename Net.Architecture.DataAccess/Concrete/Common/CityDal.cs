@@ -8,8 +8,6 @@ namespace Net.Architecture.DataAccess.Concrete.Common
     public class CityDal : BaseRepository<City, PostgreSqlContext>, ICityDal
     {
         public CityDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-
-        }
+        { }
     }
 }

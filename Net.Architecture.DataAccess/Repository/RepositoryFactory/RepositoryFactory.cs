@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Net.Architecture.DataAccess.Contexts;
 using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
@@ -18,7 +19,15 @@ namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
 
         public IBaseRepository<T> CreateBaseRepository<T>() where T : class, IEntity, new()
         {
-            throw new NotImplementedException();
+            _repositories ??= new Dictionary<Type, object>();
+            var type = typeof(T);
+
+            if (!_repositories.ContainsKey(type))
+            {
+                var repositoryInstance = new BaseRepository<T, TContext>(_context);
+                _repositories.Add(type, repositoryInstance);
+            }
+            return ((IBaseRepository<T>)_repositories[type]);
         }
 
         public T CreateDal<T>() where T : class

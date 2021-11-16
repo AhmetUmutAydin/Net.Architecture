@@ -12,8 +12,7 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
     public class UserRoleDal : BaseRepository<UserRole, PostgreSqlContext>, IUserRoleDal
     {
         public UserRoleDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-        }
+        { }
 
         public async Task<IEnumerable<Role>> GetUserRoles(long userId)
         {

@@ -9,17 +9,16 @@ namespace Net.Architecture.DataAccess.Repository
 {
     public interface IBaseRepository<TEntity> where TEntity : class, IEntity, new()
     {
-        TEntity Get(Expression<Func<TEntity, bool>> filter);
         Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> filter);
-        IQueryable<TEntity> GetQueryable(Expression<Func<TEntity, bool>> filter = null);
-        List<TEntity> GetList(Expression<Func<TEntity, bool>> filter = null);
+        Task<TEntity> SingleOrDefaultAsync(Expression<Func<TEntity, bool>> filter);
         Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> filter = null);
-        void Add(TEntity entity);
+        Task<bool> AnyAsync(Expression<Func<TEntity, bool>> filter);
+        Task<bool> AllAsync(Expression<Func<TEntity, bool>> filter);
         Task AddAsync(TEntity entity);
-        void AddRange(IEnumerable<TEntity> entities);
         Task AddRangeAsync(IEnumerable<TEntity> entities);
         void Update(TEntity entity);
         void DeleteRange(IEnumerable<TEntity> entities);
         void Delete(TEntity entity);
+        IQueryable<TEntity> GetQueryable(Expression<Func<TEntity, bool>> filter = null);
     }
 }

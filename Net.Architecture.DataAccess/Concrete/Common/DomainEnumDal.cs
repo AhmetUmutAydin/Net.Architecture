@@ -8,8 +8,6 @@ namespace Net.Architecture.DataAccess.Concrete.Common
     public class DomainEnumDal : BaseRepository<DomainEnum, PostgreSqlContext>, IDomainEnumDal
     {
         public DomainEnumDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-
-        }
+        { }
     }
 }

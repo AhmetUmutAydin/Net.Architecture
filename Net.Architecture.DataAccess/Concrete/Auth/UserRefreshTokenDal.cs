@@ -12,7 +12,7 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
     {
         public UserRefreshTokenDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
         { }
-
+        //ToDo Sil 
         public async Task<User> GetUserByRefreshToken(string refreshToken)
         {
             var userRefreshToken = await _context.UserRefreshToken.Where(x => x.Code == refreshToken && x.Status && x.User.Status).SingleOrDefaultAsync();

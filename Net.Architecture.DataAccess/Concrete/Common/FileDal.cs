@@ -8,8 +8,6 @@ namespace Net.Architecture.DataAccess.Concrete.Common
     public class FileDal : BaseRepository<File, PostgreSqlContext>, IFileDal
     {
         public FileDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
-        {
-
-        }
+        { }
     }
 }
