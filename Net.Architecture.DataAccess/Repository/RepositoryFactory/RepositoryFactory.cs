@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
-using Net.Architecture.DataAccess.Contexts;
 using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
