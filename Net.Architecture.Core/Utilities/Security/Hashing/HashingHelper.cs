@@ -26,7 +26,6 @@ namespace Net.Architecture.Core.Utilities.Security.Hashing
                     }
                 }
             }
-
             return true;
         }
     }

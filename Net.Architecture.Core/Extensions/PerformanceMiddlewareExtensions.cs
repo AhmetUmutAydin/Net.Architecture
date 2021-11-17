@@ -10,5 +10,4 @@ namespace Net.Architecture.Core.Extensions
             app.UseMiddleware<PerformanceMiddleware>();
         }
     }
-
 }

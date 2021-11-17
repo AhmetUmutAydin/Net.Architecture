@@ -14,4 +14,8 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Architecture.DataAccess\Net.Architecture.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>

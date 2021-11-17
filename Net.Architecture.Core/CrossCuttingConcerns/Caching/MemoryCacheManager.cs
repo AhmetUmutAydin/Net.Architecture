@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
+using Net.Architecture.DataAccess.Repository;
+using Net.Architecture.DataAccess.UnitOfWork;
+using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.Core.CrossCuttingConcerns.Caching
 {
@@ -64,7 +68,7 @@ namespace Net.Architecture.Core.CrossCuttingConcerns.Caching
         {
             return () =>
             {
-                return _unitOfWork.Repository<BaseRepository<T, DbContext>>().GetListAsync(x => x.Status);
+                return _unitOfWork.Repository<T>().GetListAsync(x => x.Status);
             };
         }
     }

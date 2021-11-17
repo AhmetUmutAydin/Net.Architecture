@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Net.Architecture.Core.Utilities.IoC;
+using Net.Architecture.DataAccess.UnitOfWork;
 
 namespace Net.Architecture.Core.ActionsFilters
 {
@@ -22,7 +23,6 @@ namespace Net.Architecture.Core.ActionsFilters
             {
                 await _unitOfWork.RollbackAsync();
             }
-
         }
     }
 }

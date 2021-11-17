@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.Core.CrossCuttingConcerns.Caching
 {

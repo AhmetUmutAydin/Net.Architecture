@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
+using Net.Architecture.Entities.BaseEntities;
+using Net.Architecture.Entities.Concrete.Common;
 
 namespace Net.Architecture.Core.Extensions
 {
