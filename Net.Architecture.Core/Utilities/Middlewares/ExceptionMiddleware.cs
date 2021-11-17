@@ -40,7 +40,5 @@ namespace Net.Architecture.Core.Utilities.Middlewares
                 }
             }
         }
-
     }
-
 }

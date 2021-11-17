@@ -35,13 +35,5 @@ namespace Net.Architecture.Core.Extensions
         {
             audiences.ForEach(audience => claims.Add(new Claim(JwtRegisteredClaimNames.Aud, audience)));
         }
-        public static void AddInstitutionId(this ICollection<Claim> claims, string institutionId)
-        {
-            claims.Add(new Claim("institutionId", institutionId));
-        }
-        public static void AddEmployeeId(this ICollection<Claim> claims, string employeeId)
-        {
-            claims.Add(new Claim("employeeId", employeeId));
-        }
     }
 }

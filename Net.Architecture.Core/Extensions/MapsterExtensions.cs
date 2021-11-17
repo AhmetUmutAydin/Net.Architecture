@@ -5,6 +5,7 @@ using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 using Net.Architecture.Entities.BaseEntities;
 using Net.Architecture.Entities.Concrete.Common;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.Core.Extensions
 {
@@ -37,24 +38,12 @@ namespace Net.Architecture.Core.Extensions
             return dto;
         }
 
-        //#ToDo:İmplementasyon yapılacak queryable için
-        public static TDestination DbToDto<TDestination>(this IQueryable queryable) where TDestination : IDTO
-        {
-            throw new NotImplementedException("Not İmpelemented");
-            //return queryable.Adapt<TDestination>();
-        }
-
         public static void AddMapsterConfigurations(this IServiceCollection services)
         {
             TypeAdapterConfig<DomainEnum, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => src.Description);
             TypeAdapterConfig<City, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => src.Name);
             TypeAdapterConfig<District, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => src.Name);
-            TypeAdapterConfig<Employee, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => $"{src.PersonalInformation.Name} {src.PersonalInformation.Surname}");
-            TypeAdapterConfig<Member, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => $"{src.PersonalInformation.Name} {src.PersonalInformation.Surname}");
-            TypeAdapterConfig<Branch, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => $"{src.Name}");
             TypeAdapterConfig<PersonalInformation, DropdownDto>.NewConfig().Map(dest => dest.Value, src => src.Id).Map(dest => dest.Text, src => $"{src.Name} {src.Surname}");
-            TypeAdapterConfig<BalanceDto, EmployeeBalance>.NewConfig().Map(dest => dest.EmployeeId, src => src.DeciderId);
-            TypeAdapterConfig<BalanceDto, MemberBalance>.NewConfig().Map(dest => dest.MemberId, src => src.DeciderId);
         }
     }
 }
