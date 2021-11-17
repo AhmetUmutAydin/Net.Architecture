@@ -29,7 +29,7 @@ namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
             return ((IBaseRepository<T>)_repositories[type]);
         }
 
-        public T CreateDal<T>() where T : class
+        public T CreateCustomRepository<T>() where T : class
         {
             _repositories ??= new Dictionary<Type, object>();
             var type = typeof(T);

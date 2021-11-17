@@ -5,6 +5,6 @@ namespace Net.Architecture.DataAccess.Repository.RepositoryFactory
     public interface IRepositoryFactory
     {
         IBaseRepository<T> CreateBaseRepository<T>() where T : class, IEntity, new();
-        T CreateDal<T>() where T : class;
+        T CreateCustomRepository<T>() where T : class;
     }
 }

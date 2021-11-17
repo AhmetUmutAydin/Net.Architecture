@@ -5,7 +5,7 @@ using Net.Architecture.Entities.Concrete.Auth;
 
 namespace Net.Architecture.DataAccess.Abstract.Auth
 {
-    public interface IUserRoleDal : IBaseRepository<UserRole>
+    public interface IUserRepository : IBaseRepository<UserRole>
     {
         Task<IEnumerable<Role>> GetUserRoles(long userId);
     }

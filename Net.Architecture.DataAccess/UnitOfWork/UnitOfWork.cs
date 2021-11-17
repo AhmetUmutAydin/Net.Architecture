@@ -4,7 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using Net.Architecture.DataAccess.Contexts;
+using Net.Architecture.DataAccess.Repository;
 using Net.Architecture.DataAccess.Repository.RepositoryFactory;
+using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.DataAccess.UnitOfWork
 {
@@ -63,9 +65,14 @@ namespace Net.Architecture.DataAccess.UnitOfWork
             await _transaction.DisposeAsync();
         }
 
-        public T Repository<T>() where T : class
+        public IBaseRepository<T> Repository<T>() where T : class, IEntity, new()
         {
-            return CreateDal<T>();
+            return CreateBaseRepository<T>();
+        }
+
+        public T CustomRepository<T>() where T : class
+        {
+            return CreateCustomRepository<T>();
         }
 
         public async Task CommitAsync()
@@ -91,7 +98,5 @@ namespace Net.Architecture.DataAccess.UnitOfWork
             if (_transaction?.GetDbTransaction().Connection == null)
                 await CheckTransactionAsync();
         }
-
-
     }
 }

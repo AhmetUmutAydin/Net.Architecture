@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
+using Net.Architecture.DataAccess.Repository;
 using Net.Architecture.DataAccess.Repository.RepositoryFactory;
+using Net.Architecture.Entities.BaseEntities;
 
 namespace Net.Architecture.DataAccess.UnitOfWork
 {
@@ -11,6 +13,7 @@ namespace Net.Architecture.DataAccess.UnitOfWork
         Task CommitAsync();
         Task CheckTransactionAsync();
         Task CreateTransactionAsync();
-        T Repository<T>() where T : class;
+        IBaseRepository<T> Repository<T>() where T : class, IEntity, new();
+        T CustomRepository<T>() where T : class;
     }
 }

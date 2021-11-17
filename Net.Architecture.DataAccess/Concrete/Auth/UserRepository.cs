@@ -9,9 +9,9 @@ using Net.Architecture.Entities.Concrete.Auth;
 
 namespace Net.Architecture.DataAccess.Concrete.Auth
 {
-    public class UserRoleDal : BaseRepository<UserRole, PostgreSqlContext>, IUserRoleDal
+    public class UserRepository : BaseRepository<UserRole, PostgreSqlContext>, IUserRepository
     {
-        public UserRoleDal(PostgreSqlContext PostgreSqlContext) : base(PostgreSqlContext)
+        public UserRepository(PostgreSqlContext postgreSqlContext) : base(postgreSqlContext)
         { }
 
         public async Task<IEnumerable<Role>> GetUserRoles(long userId)
