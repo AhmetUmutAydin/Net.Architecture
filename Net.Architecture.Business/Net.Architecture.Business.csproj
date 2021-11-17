@@ -10,4 +10,12 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ValidationRules\FluentValidation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Architecture.Core\Net.Architecture.Core.csproj" />
+  </ItemGroup>
+
 </Project>
