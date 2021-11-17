@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
-using Net.Architecture.DataAccess.Repository;
 using Net.Architecture.DataAccess.UnitOfWork;
 using Net.Architecture.Entities.BaseEntities;
 
