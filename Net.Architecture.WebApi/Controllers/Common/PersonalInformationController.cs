@@ -3,6 +3,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Net.Architecture.Business.Helpers.Abstract;
+using Net.Architecture.Business.Helpers.Concrete;
+using Net.Architecture.Core.Utilities.Result;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.WebApi.Controllers.Common
 {
@@ -17,7 +21,7 @@ namespace Net.Architecture.WebApi.Controllers.Common
         }
 
         [HttpGet("{deciderType}/{deciderId}")]
-        [Authorize(Roles = "Company,Trainer,Demo")]
+        [Authorize(Roles = "")]
         [ProducesResponseType(typeof(PersonalInformationDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<PersonalInformationDto>> Get(long deciderType, long deciderId)
@@ -30,7 +34,7 @@ namespace Net.Architecture.WebApi.Controllers.Common
         }
 
         [HttpGet("personal-information-dropdown")]
-        [Authorize(Roles = "Company,Trainer,Demo")]
+        [Authorize(Roles = "")]
         [ProducesResponseType(typeof(IEnumerable<DropdownDto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<DropdownDto>>> GetPersonalInformationDropdown()

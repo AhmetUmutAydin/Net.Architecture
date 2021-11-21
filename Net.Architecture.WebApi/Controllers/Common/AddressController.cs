@@ -2,6 +2,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Net.Architecture.Business.Helpers.Concrete;
+using Net.Architecture.Business.ValidationRules.FluentValidation;
+using Net.Architecture.Core.ActionsFilters;
+using Net.Architecture.Core.Utilities.Result;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.WebApi.Controllers.Common
 {
@@ -10,7 +15,7 @@ namespace Net.Architecture.WebApi.Controllers.Common
     public class AddressController : BaseController
     {
         [HttpGet("{deciderType}/{deciderId}")]
-        [Authorize(Roles = "Company,Trainer,Demo")]
+        [Authorize(Roles = "")]
         [ProducesResponseType(typeof(AddressDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<AddressDto>> Get(long deciderType, long deciderId)
@@ -23,7 +28,7 @@ namespace Net.Architecture.WebApi.Controllers.Common
         }
 
         [HttpPost]
-        [Authorize(Roles = "Company,Trainer")]
+        [Authorize(Roles = "")]
         [DbTransaction]
         [Validation(typeof(AddressDtoValidator))]
         [ProducesResponseType(typeof(AddressDto), StatusCodes.Status201Created)]
@@ -39,7 +44,7 @@ namespace Net.Architecture.WebApi.Controllers.Common
         }
 
         [HttpPut]
-        [Authorize(Roles = "Company,Trainer")]
+        [Authorize(Roles = "")]
         [DbTransaction]
         [Validation(typeof(AddressDtoValidator))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
