@@ -2,3 +2,14 @@ C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.AssemblyInfo.cs
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.deps.json
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.runtimeconfig.json
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.runtimeconfig.dev.json
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.csproj.CopyComplete
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.genruntimeconfig.cache

@@ -1,7 +1,6 @@
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.deps.json
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.dll
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.pdb
-C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\obj\Debug\netcoreapp3.1\Net.Architecture.Entities.csprojAssemblyReference.cache
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\obj\Debug\netcoreapp3.1\Net.Architecture.Entities.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\obj\Debug\netcoreapp3.1\Net.Architecture.Entities.AssemblyInfo.cs
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Entities\obj\Debug\netcoreapp3.1\Net.Architecture.Entities.csproj.CoreCompileInputs.cache

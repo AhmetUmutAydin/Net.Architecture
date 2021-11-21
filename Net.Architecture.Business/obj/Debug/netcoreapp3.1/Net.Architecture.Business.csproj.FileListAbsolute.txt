@@ -2,3 +2,15 @@ C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\ne
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.AssemblyInfoInputs.cache
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.AssemblyInfo.cs
 C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Business.deps.json
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Business.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Business.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Core.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Core.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.DataAccess.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\bin\Debug\netcoreapp3.1\Net.Architecture.Entities.pdb
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.csproj.CopyComplete
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.dll
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Business\obj\Debug\netcoreapp3.1\Net.Architecture.Business.pdb
