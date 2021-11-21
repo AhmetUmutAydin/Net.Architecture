@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Net.Architecture.Entities.BaseEntities;
+using Net.Architecture.Entities.Concrete.Auth;
 
 namespace Net.Architecture.Entities.Concrete.Common
 {
@@ -40,5 +41,7 @@ namespace Net.Architecture.Entities.Concrete.Common
         public string FilePath { get; set; }
 
         public virtual PersonalInformation PersonalInformation { get; set; }
+        public virtual User User { get; set; }
+
     }
 }

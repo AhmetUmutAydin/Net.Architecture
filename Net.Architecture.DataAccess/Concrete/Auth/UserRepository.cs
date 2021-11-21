@@ -6,6 +6,7 @@ using Net.Architecture.DataAccess.Abstract.Auth;
 using Net.Architecture.DataAccess.Contexts;
 using Net.Architecture.DataAccess.Repository;
 using Net.Architecture.Entities.Concrete.Auth;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.DataAccess.Concrete.Auth
 {
@@ -19,6 +20,16 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
             var roles = await _context.UserRole.Include(i => i.Role).Where(r => r.Status && r.UserId == userId)
                 .Select(s => s.Role).ToListAsync();
             return roles;
+        }
+        public async Task<LayoutDto> GetUserLayoutInformation(long userId)
+        {
+            var layout = await _context.User.Where(x => x.Status && x.Id == userId).Select(s => new LayoutDto()
+            {
+                Id = s.Id,
+                ImageUrl = s.File != null ? s.File.Source : null,
+                Username = s.Username
+            }).FirstOrDefaultAsync();
+            return layout;
         }
     }
 }

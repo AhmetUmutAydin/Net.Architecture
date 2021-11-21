@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Net.Architecture.Business.Abstract.Auth;
+using Net.Architecture.Business.ValidationRules.FluentValidation;
 using Net.Architecture.Core.ActionsFilters;
 using Net.Architecture.Core.Utilities.Result;
 using Net.Architecture.Entities.Dtos;

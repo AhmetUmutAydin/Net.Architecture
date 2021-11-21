@@ -5,7 +5,6 @@ namespace Net.Architecture.Entities.Dtos
     public class LayoutDto:DtoBase
     {
         public string Username { get; set; }
-        public string InstitutionName { get; set; }
         public string ImageUrl { get; set; }
     }
 }

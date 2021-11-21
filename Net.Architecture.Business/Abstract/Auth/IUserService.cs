@@ -10,6 +10,5 @@ namespace Net.Architecture.Business.Abstract.Auth
         Task<IServiceResult> SaveUserProfile(UserProfileDto userProfileDto);
         Task<IServiceResult> SaveUserPassword(UserProfileDto userProfileDto);
         Task<IServiceResult<LayoutDto>> GetUserLayout();
-
     }
 }

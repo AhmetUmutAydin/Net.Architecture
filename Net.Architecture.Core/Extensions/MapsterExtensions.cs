@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using Mapster;
 using Microsoft.Extensions.DependencyInjection;
 using Net.Architecture.Entities.BaseEntities;
+using Net.Architecture.Entities.Concrete.Auth;
 using Net.Architecture.Entities.Concrete.Common;
 using Net.Architecture.Entities.Dtos;
 
