@@ -3,15 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Net.Architecture.WebApi.Controllers;
-using Pilates.Application.Business.Helpers.Concrete;
-using Pilates.Application.Business.ValidationRules.FluentValidation;
-using Pilates.Application.Core.ActionsFilters;
-using Pilates.Application.Core.Utilities.Result;
-using Pilates.Application.Entities.Dtos;
-using Pilates.Application.Entities.Enums;
 
-namespace Pilates.Application.WebApi.Controllers.Common
+namespace Net.Architecture.WebApi.Controllers.Common
 {
     [Route("api/v1/communication")]
     [ApiController]

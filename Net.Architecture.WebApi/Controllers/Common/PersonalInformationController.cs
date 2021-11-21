@@ -3,13 +3,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Net.Architecture.WebApi.Controllers;
-using Pilates.Application.Business.Helpers.Abstract;
-using Pilates.Application.Business.Helpers.Concrete;
-using Pilates.Application.Core.Utilities.Result;
-using Pilates.Application.Entities.Dtos;
 
-namespace Pilates.Application.WebApi.Controllers.Common
+namespace Net.Architecture.WebApi.Controllers.Common
 {
     [Route("api/v1/personal-information")]
     [ApiController]

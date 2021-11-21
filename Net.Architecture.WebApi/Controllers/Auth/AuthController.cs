@@ -2,16 +2,8 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Net.Architecture.WebApi.Controllers;
-using Pilates.Application.Business.Abstract.Auth;
-using Pilates.Application.Business.Abstract.Studio;
-using Pilates.Application.Business.ValidationRules.FluentValidation;
-using Pilates.Application.Core.ActionsFilters;
-using Pilates.Application.Core.Utilities.Result;
-using Pilates.Application.Entities.Configurations.JsonObjects;
-using Pilates.Application.Entities.Dtos;
 
-namespace Pilates.Application.WebApi.Controllers.Auth
+namespace Net.Architecture.WebApi.Controllers.Auth
 {
     [Route("api/v1/auth")]
     [ApiController]

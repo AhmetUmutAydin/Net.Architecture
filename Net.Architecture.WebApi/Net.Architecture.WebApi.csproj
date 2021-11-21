@@ -19,5 +19,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Net.Architecture.Business\Net.Architecture.Business.csproj" />
+    <ProjectReference Include="..\Net.Architecture.Core\Net.Architecture.Core.csproj" />
+  </ItemGroup>
+
 
 </Project>

@@ -2,14 +2,12 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Net.Architecture.WebApi.Controllers;
-using Pilates.Application.Business.Abstract.Auth;
-using Pilates.Application.Business.ValidationRules.FluentValidation;
-using Pilates.Application.Core.ActionsFilters;
-using Pilates.Application.Core.Utilities.Result;
-using Pilates.Application.Entities.Dtos;
+using Net.Architecture.Business.Abstract.Auth;
+using Net.Architecture.Core.ActionsFilters;
+using Net.Architecture.Core.Utilities.Result;
+using Net.Architecture.Entities.Dtos;
 
-namespace Pilates.Application.WebApi.Controllers.Auth
+namespace Net.Architecture.WebApi.Controllers.Auth
 {
     [Route("api/v1/user")]
     [ApiController]
@@ -23,7 +21,7 @@ namespace Pilates.Application.WebApi.Controllers.Auth
         }
 
         [HttpGet]
-        [Authorize(Roles = "Company,Trainer,Admin,Demo")]
+        [Authorize(Roles = "")]
         [ProducesResponseType(typeof(UserProfileDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<UserProfileDto>> Get()
@@ -36,7 +34,7 @@ namespace Pilates.Application.WebApi.Controllers.Auth
         }
 
         [HttpPut("profile")]
-        [Authorize(Roles = "Company,Trainer,Admin")]
+        [Authorize(Roles = "")]
         [Validation(typeof(UserProfileDtoValidator))]
         [DbTransaction]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -52,7 +50,7 @@ namespace Pilates.Application.WebApi.Controllers.Auth
 
 
         [HttpPut("password")]
-        [Authorize(Roles = "Company,Trainer,Admin")]
+        [Authorize(Roles = "")]
         [Validation(typeof(UserPasswordDtoValidator))]
         [DbTransaction]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -68,7 +66,7 @@ namespace Pilates.Application.WebApi.Controllers.Auth
 
 
         [HttpGet("layout")]
-        [Authorize(Roles = "Company,Trainer,Admin,Demo")]
+        [Authorize(Roles = "")]
         [ProducesResponseType(typeof(LayoutDto), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<LayoutDto>> GetUserLayout()
