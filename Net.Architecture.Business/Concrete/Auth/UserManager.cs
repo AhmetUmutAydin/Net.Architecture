@@ -6,6 +6,7 @@ using Net.Architecture.Core.Constants;
 using Net.Architecture.Core.Utilities.Result;
 using Net.Architecture.Core.Utilities.Security.Hashing;
 using Net.Architecture.DataAccess.UnitOfWork;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.Business.Concrete.Auth
 {

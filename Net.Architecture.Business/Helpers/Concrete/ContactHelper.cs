@@ -3,9 +3,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Net.Architecture.Business.Abstract;
 using Net.Architecture.Business.Helpers.Abstract;
+using Net.Architecture.Core.Extensions;
 using Net.Architecture.Core.Utilities.Result;
 using Net.Architecture.DataAccess.UnitOfWork;
 using Net.Architecture.Entities.Concrete.Common;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.Business.Helpers.Concrete
 {
