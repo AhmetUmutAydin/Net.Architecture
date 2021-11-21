@@ -8,7 +8,6 @@ namespace Net.Architecture.DataAccess.Abstract.Auth
 {
     public interface IUserRepository : IBaseRepository<UserRole>
     {
-        Task<IEnumerable<Role>> GetUserRoles(long userId);
         Task<LayoutDto> GetUserLayoutInformation(long userId);
     }
 }

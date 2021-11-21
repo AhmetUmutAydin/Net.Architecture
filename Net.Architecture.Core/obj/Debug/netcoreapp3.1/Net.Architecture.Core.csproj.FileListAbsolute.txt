@@ -1,0 +1,4 @@
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Core\obj\Debug\netcoreapp3.1\Net.Architecture.Core.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Core\obj\Debug\netcoreapp3.1\Net.Architecture.Core.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Core\obj\Debug\netcoreapp3.1\Net.Architecture.Core.AssemblyInfo.cs
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.Core\obj\Debug\netcoreapp3.1\Net.Architecture.Core.csproj.CoreCompileInputs.cache

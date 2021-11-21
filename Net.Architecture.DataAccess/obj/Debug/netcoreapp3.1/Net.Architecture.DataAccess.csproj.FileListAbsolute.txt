@@ -1,0 +1,4 @@
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.csprojAssemblyReference.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.AssemblyInfoInputs.cache
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.AssemblyInfo.cs
+C:\Users\PC\source\repos\Net.Architecture\Net.Architecture.DataAccess\obj\Debug\netcoreapp3.1\Net.Architecture.DataAccess.csproj.CoreCompileInputs.cache
