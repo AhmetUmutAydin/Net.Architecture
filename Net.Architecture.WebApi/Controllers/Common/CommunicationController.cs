@@ -21,8 +21,6 @@ namespace Net.Architecture.WebApi.Controllers.Common
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<CommunicationDto>> Get(long deciderType, long deciderId)
         {
-
-
             var result = await CommunicationFactory.CreateInstance(deciderType).GetCommunication(deciderId);
             if (result.Result)
                 return Ok(result.Data);
@@ -38,8 +36,6 @@ namespace Net.Architecture.WebApi.Controllers.Common
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<IEnumerable<CommunicationDto>>> Post(ContactDto contact)
         {
-
-
             var result = await CommunicationFactory.CreateInstance(contact.Decider.DeciderType).SaveCommunication(contact);
             if (!result.Result)
             {

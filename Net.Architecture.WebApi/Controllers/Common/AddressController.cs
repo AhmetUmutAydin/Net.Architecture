@@ -60,7 +60,3 @@ namespace Net.Architecture.WebApi.Controllers.Common
 
     }
 }
-//AddresController,CommunicationController FileController PersoneController 
-//Validators- Dtos fazlalıklar
-//ContactHelper
-//Appsettings  program.cs startup.cs
