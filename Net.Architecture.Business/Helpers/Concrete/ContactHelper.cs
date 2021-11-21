@@ -47,7 +47,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
                 {
                     entity.Status = true;
                     entity.ContactId = contactId;
-                    await _unitOfWork.Repository<CommunicationDal>().AddAsync(entity);
+                    await _unitOfWork.Repository<Communication>().AddAsync(entity);
                     result.Add(entity);
                 }
 
@@ -62,7 +62,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
             {
                 Status = true,
             };
-            await _unitOfWork.Repository<ContactDal>().AddAsync(contact);
+            await _unitOfWork.Repository<Contact>().AddAsync(contact);
             return new ServiceResult<Contact>(contact);
         }
 
@@ -71,7 +71,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
             var deletedCommunications = communications.Where(i => i.Status && !communicationDtos.Any(c => c.Id == i.Id && c.Id != null));
             if (deletedCommunications.Any())
             {
-                _unitOfWork.Repository<CommunicationDal>().DeleteRange(deletedCommunications);
+                _unitOfWork.Repository<Communication>().DeleteRange(deletedCommunications);
                 await _unitOfWork.SaveChangesAsync();
             }
 
@@ -87,12 +87,12 @@ namespace Net.Architecture.Business.Helpers.Concrete
             {
                 foreach (var dto in updatedCommunications)
                 {
-                    var entity = await _unitOfWork.Repository<CommunicationDal>().GetAsync(x => x.Id == dto.Id && x.Status);
+                    var entity = await _unitOfWork.Repository<Communication>().GetAsync(x => x.Id == dto.Id && x.Status);
                     if (entity.Value != dto.Value || entity.CommunicationType != dto.CommunicationType)
                     {
                         entity.Value = dto.Value;
                         entity.CommunicationType = dto.CommunicationType;
-                        _unitOfWork.Repository<CommunicationDal>().Update(entity);
+                        _unitOfWork.Repository<Communication>().Update(entity);
                     }
                     result.Add(entity);
                 }

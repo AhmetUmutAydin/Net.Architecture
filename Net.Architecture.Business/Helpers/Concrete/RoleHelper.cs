@@ -16,10 +16,10 @@ namespace Net.Architecture.Business.Helpers.Concrete
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IServiceResult> SaveUserRole(long userId)
+        public async Task<IServiceResult> SaveUserRole(long userId, string role)
         {
-            var roleId = await FindRoleId(employeeType);
-            var userRole = await _unitOfWork.Repository<UserRoleDal>().GetAsync(x => x.Status && x.UserId == userId);
+            var roleId = await FindRoleId(role);
+            var userRole = await _unitOfWork.Repository<UserRole>().GetAsync(x => x.Status && x.UserId == userId);
 
             if (userRole is null)
             {
@@ -30,34 +30,22 @@ namespace Net.Architecture.Business.Helpers.Concrete
                     RoleId = roleId
                 };
 
-                await _unitOfWork.Repository<UserRoleDal>().AddAsync(userRole);
+                await _unitOfWork.Repository<UserRole>().AddAsync(userRole);
             }
             else
             {
                 userRole.RoleId = roleId;
-                _unitOfWork.Repository<UserRoleDal>().Update(userRole);
+                _unitOfWork.Repository<UserRole>().Update(userRole);
             }
 
             await _unitOfWork.SaveChangesAsync();
             return new ServiceResult();
         }
 
-        private async Task<long> FindRoleId(long employeeType)
+        private async Task<long> FindRoleId(string role)
         {
-            long roleId = 0;
-            if (employeeType == (long)Enums.EmployeeType.Owner)
-            {
-                var role = await _unitOfWork.Repository<RoleDal>().GetAsync(x => x.Status && x.Name == Constants.CompanyRoleName);
-                roleId = role.Id;
-            }
-
-            else if (employeeType == (long)Enums.EmployeeType.Trainer)
-            {
-                var role = await _unitOfWork.Repository<RoleDal>().GetAsync(x => x.Status && x.Name == Constants.TrainerRoleName);
-                roleId = role.Id;
-            }
-
-            return roleId;
+            var selectedRole = await _unitOfWork.Repository<Role>().GetAsync(x => x.Status && x.Name == role);
+            return selectedRole.Id;
         }
     }
 }

@@ -11,18 +11,14 @@ namespace Net.Architecture.Business.Helpers.Concrete
             IFileService fileService = null;
             switch (deciderType)
             {
-                case (long)Enums.DeciderType.Employee:
-                    fileService = IocManager.Resolve<IEmployeeService>();
-                    break;
-                case (long)Enums.DeciderType.Branch:
-                    fileService = IocManager.Resolve<IBranchService>();
-                    break;
-                case (long)Enums.DeciderType.Member:
-                    fileService = IocManager.Resolve<IMemberService>();
-                    break;
-                case (long)Enums.DeciderType.Institution:
-                    fileService = IocManager.Resolve<IInstitutionService>();
-                    break;
+                //switch (deciderType)
+                //{
+                //    case (long)Enums.DeciderType.Employee:
+                //        fileService = IocManager.Resolve<IEmployeeService>();
+                //        break;
+                //    default:
+                //        break;
+                //}
                 default:
                     break;
             }

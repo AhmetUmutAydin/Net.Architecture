@@ -61,7 +61,7 @@ namespace Net.Architecture.Business.Concrete.Auth
 
             await _unitOfWork.Repository<User>().AddAsync(user);
             await _unitOfWork.SaveChangesAsync();
-            await _roleHelper.SaveUserRole(user.Id);
+            await _roleHelper.SaveUserRole(user.Id, Constants.DefaultRole);
 
             return new ServiceResult<User>(user);
         }

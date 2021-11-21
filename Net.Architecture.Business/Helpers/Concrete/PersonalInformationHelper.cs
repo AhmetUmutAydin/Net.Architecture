@@ -35,7 +35,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
                 else
                     return new ServiceResult<PersonalInformation>(fileIdResponse.Message);
             }
-            await _unitOfWork.Repository<PersonalInformationDal>().AddAsync(personalInformation);
+            await _unitOfWork.Repository<PersonalInformation>().AddAsync(personalInformation);
             await _unitOfWork.SaveChangesAsync();
 
             return new ServiceResult<PersonalInformation>(personalInformation);
@@ -46,7 +46,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
             if (!personalInformationDto.Id.HasValue)
                 return new ServiceResult<AddressDto>(Messages.GlobalError);
 
-            var personalInformation = await _unitOfWork.Repository<PersonalInformationDal>().GetAsync(x => x.Status && x.Id == personalInformationDto.Id);
+            var personalInformation = await _unitOfWork.Repository<PersonalInformation>().GetAsync(x => x.Status && x.Id == personalInformationDto.Id);
 
             if (personalInformation is null)
                 return new ServiceResult<AddressDto>(Messages.PersonalInformationNotFound);
@@ -59,14 +59,14 @@ namespace Net.Architecture.Business.Helpers.Concrete
             personalInformation.Gender = personalInformationDto.Gender;
             personalInformation.Notes = personalInformationDto.Notes;
 
-            _unitOfWork.Repository<PersonalInformationDal>().Update(personalInformation);
+            _unitOfWork.Repository<PersonalInformation>().Update(personalInformation);
             await _unitOfWork.SaveChangesAsync();
             return new ServiceResult();
         }
 
         public async Task<IServiceResult<IEnumerable<DropdownDto>>> GetPersonalInformationDropdown()
         {
-            var result = await _unitOfWork.Repository<PersonalInformationDal>().GetEmployeeListWithPersonalInformation(JwtInstitutionId);
+            var result = await _unitOfWork.Repository<PersonalInformation>().GetListAsync(x => x.Status);
             var dtos = result.ToDtos<DropdownDto>();
             return new ServiceResult<IEnumerable<DropdownDto>>(dtos);
         }

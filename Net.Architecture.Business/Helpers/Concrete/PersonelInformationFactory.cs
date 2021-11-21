@@ -11,12 +11,14 @@ namespace Net.Architecture.Business.Helpers.Concrete
             IPersonalInformationService personalInformationService = null;
             switch (deciderType)
             {
-                case (long)Enums.DeciderType.Employee:
-                    personalInformationService = IocManager.Resolve<IEmployeeService>();
-                    break;
-                case (long)Enums.DeciderType.Member:
-                    personalInformationService = IocManager.Resolve<IMemberService>();
-                    break;
+                //switch (deciderType)
+                //{
+                //    case (long)Enums.DeciderType.Employee:
+                //        personalInformationService = IocManager.Resolve<IEmployeeService>();
+                //        break;
+                //    default:
+                //        break;
+                //}
                 default:
                     break;
             }

@@ -8,6 +8,7 @@ using Net.Architecture.Business.Helpers.Abstract;
 using Net.Architecture.Core.Constants;
 using Net.Architecture.Core.Utilities.Result;
 using Net.Architecture.DataAccess.UnitOfWork;
+using Net.Architecture.Entities.Dtos;
 using File = Net.Architecture.Entities.Concrete.Common.File;
 
 namespace Net.Architecture.Business.Helpers.Concrete
@@ -41,7 +42,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
 
             await UploadFile(fileOperationsDto.File.FormFile, file.Source, $"{Constants.WWWRoot}/{Constants.Files}");
 
-            await _unitOfWork.Repository<FileDal>().AddAsync(file);
+            await _unitOfWork.Repository<File>().AddAsync(file);
             await _unitOfWork.SaveChangesAsync();
 
             return new ServiceResult<File>(file);
@@ -85,7 +86,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
         public async Task<ServiceResult<long>> GetFileIdByRootİmageUrl(string imageUrl)
         {
             var source = imageUrl.Split("/").Last();
-            var file = await _unitOfWork.Repository<FileDal>().GetAsync(x => x.Status && x.Source == source);
+            var file = await _unitOfWork.Repository<File>().GetAsync(x => x.Status && x.Source == source);
             if (file is null)
                 return new ServiceResult<long>(Messages.FileNotFound);
 
