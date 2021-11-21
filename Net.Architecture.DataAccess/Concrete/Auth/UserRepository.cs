@@ -15,12 +15,6 @@ namespace Net.Architecture.DataAccess.Concrete.Auth
         public UserRepository(PostgreSqlContext postgreSqlContext) : base(postgreSqlContext)
         { }
 
-        public async Task<IEnumerable<Role>> GetUserRoles(long userId)
-        {
-            var roles = await _context.UserRole.Include(i => i.Role).Where(r => r.Status && r.UserId == userId)
-                .Select(s => s.Role).ToListAsync();
-            return roles;
-        }
         public async Task<LayoutDto> GetUserLayoutInformation(long userId)
         {
             var layout = await _context.User.Where(x => x.Status && x.Id == userId).Select(s => new LayoutDto()

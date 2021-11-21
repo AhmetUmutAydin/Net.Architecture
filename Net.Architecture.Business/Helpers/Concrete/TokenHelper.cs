@@ -69,8 +69,6 @@ namespace Net.Architecture.Business.Helpers.Concrete
             claims.AddRoles(roles.Select(c => c.Name).ToList());
             claims.AddJti();
             claims.AddAudiences(audiences);
-            claims.AddInstitutionId(user.Employee.InstitutionId.ToString());
-            claims.AddEmployeeId(user.Employee.Id.ToString());
             return claims;
         }
         #endregion
@@ -111,6 +109,5 @@ namespace Net.Architecture.Business.Helpers.Concrete
             return claims;
         }
         #endregion
-
     }
 }

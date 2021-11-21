@@ -5,6 +5,6 @@ namespace Net.Architecture.Business.Helpers.Abstract
 {
     public interface IRoleHelper
     {
-        Task<IServiceResult> SaveUserRole(long userId, long employeeType);
+        Task<IServiceResult> SaveUserRole(long userId);
     }
 }

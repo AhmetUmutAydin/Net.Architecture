@@ -9,8 +9,7 @@ namespace Net.Architecture.Business.Abstract.Auth
 {
     public interface IAuthService
     {
-        Task<IServiceResult<User>> Register(RegisterDto registerDto, long employeeId);
-        Task<IServiceResult<RegisterInformationDto>> GetRegisterInformation(Guid guid);
+        Task<IServiceResult<User>> Register(RegisterDto registerDto);
         Task<IServiceResult<TokenDto>> CreateToken(User user);
         Task<IServiceResult<User>> Login(LoginDto loginDto);
         IServiceResult<AccessTokenDto> ClientLogin(ClientLoginDto clientLoginDto);

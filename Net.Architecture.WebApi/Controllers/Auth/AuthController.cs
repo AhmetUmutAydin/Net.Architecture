@@ -1,7 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Net.Architecture.Business.Abstract.Auth;
+using Net.Architecture.Business.ValidationRules.FluentValidation;
+using Net.Architecture.Core.ActionsFilters;
+using Net.Architecture.Core.Utilities.Result;
+using Net.Architecture.Entities.Dtos;
 
 namespace Net.Architecture.WebApi.Controllers.Auth
 {
@@ -10,20 +14,12 @@ namespace Net.Architecture.WebApi.Controllers.Auth
     public class AuthController : BaseController
     {
         private readonly IAuthService _authService;
-        private readonly IInvitationService _invitationService;
 
-        public AuthController(IAuthService authService, IInvitationService invitationService)
+        public AuthController(IAuthService authService)
         {
             _authService = authService;
-            _invitationService = invitationService;
         }
 
-        [HttpGet("welcome")]
-        public async Task<ActionResult> Welcome(string refreshToken)
-        {
-            await _authService.welcome(refreshToken);
-            return Ok(DateTime.Now.ToShortTimeString());
-        }
 
         [HttpPost("register")]
         [DbTransaction]
@@ -32,13 +28,7 @@ namespace Net.Architecture.WebApi.Controllers.Auth
         [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Register(RegisterDto registerDto)
         {
-            var invationResult = await _invitationService.GetInvitationValueAndUpdateStatus<InvitationRegisterValue>(registerDto.HashedEmployee);
-            if (!invationResult.Result)
-            {
-                return BadRequest(invationResult.BadRequest());
-            }
-
-            var registerResult = await _authService.Register(registerDto, invationResult.Data.EmployeeId);
+            var registerResult = await _authService.Register(registerDto);
             if (!registerResult.Result)
             {
                 return BadRequest(registerResult.BadRequest());
@@ -54,18 +44,6 @@ namespace Net.Architecture.WebApi.Controllers.Auth
 
         }
 
-        [HttpGet("register/{guid}")]
-        [ProducesResponseType(typeof(RegisterInformationDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(IServiceResult), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> Register(Guid guid)
-        {
-            var result = await _authService.GetRegisterInformation(guid);
-            if (result.Result)
-            {
-                return Ok(result.Data);
-            }
-            return BadRequest(result.BadRequest());
-        }
 
         [HttpPost("login")]
         [DbTransaction]

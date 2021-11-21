@@ -16,7 +16,7 @@ namespace Net.Architecture.Business.Helpers.Concrete
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<IServiceResult> SaveUserRole(long userId, long employeeType)
+        public async Task<IServiceResult> SaveUserRole(long userId)
         {
             var roleId = await FindRoleId(employeeType);
             var userRole = await _unitOfWork.Repository<UserRoleDal>().GetAsync(x => x.Status && x.UserId == userId);
